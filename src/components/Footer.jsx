@@ -3,7 +3,7 @@
 const Footer = () => {
   return (
     <footer>
-      <img src="" alt="" />
+      <img src="./assets/Logo.svg" alt="logo" />
       <div>
         <h3>Doormat Navigation</h3>
       <ul>
