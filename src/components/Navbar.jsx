@@ -1,54 +1,25 @@
-import { useState } from "react";
+import React from "react";
 
 const Navbar = () => {
-  const [isopenMenu, setIsOpenMenu] = useState(false);
-
-  const openMenu = () => {
-    setIsOpenMenu(true);
-  };
-
-  const closeMenu = () => {
-    setIsOpenMenu(false);
-  };
   return (
-    <nav className="mx-6 mt-6">
-      <div className="flex w-full items-center justify-between">
-        <img src="./assets/Logo.svg" alt="little lemon logo" />
-        <button className="cursor-pointer">
-          {isopenMenu ? (
-            <img
-              src="./assets/close-icon.png"
-              alt="close-icon"
-              onClick={closeMenu}
-              className="w-10 h-10"
-            />
-          ) : (
-            <img
-              src="./assets/🦆 icon _hamburger menu.svg"
-              alt="hamburger menu"
-              onClick={openMenu}
-              className="w-10 h-10"
-            />
-          )}
-        </button>
-      </div>
-      <ul className="hidden">
-        <li>
+    <nav className="my-5">
+      <ul className="flex flex-col justify-center items-center">
+        <li className="px-3 py-5 w-full text-center text-2xl font-bold hover:bg-[#f4ce14] transition-colors duration-300">
           <a href="#Home">Home</a>
         </li>
-        <li>
+        <li className="px-3 py-5 w-full text-center text-2xl font-bold hover:bg-[#f4ce14] transition-colors duration-300">
           <a href="#About">About</a>
         </li>
-        <li>
+        <li className="px-3 py-5 w-full text-center text-2xl font-bold hover:bg-[#f4ce14] transition-colors duration-300">
           <a href="#Menu">Menu</a>
         </li>
-        <li>
+        <li className="px-3 py-5 w-full text-center text-2xl font-bold hover:bg-[#f4ce14] transition-colors duration-300">
           <a href="#Reservations">Reservations</a>
         </li>
-        <li>
+        <li className="px-3 py-5 w-full text-center text-2xl font-bold hover:bg-[#f4ce14] transition-colors duration-300">
           <a href="#Order Online">Order Online</a>
         </li>
-        <li>
+        <li className="px-3 py-5 w-full text-center text-2xl font-bold hover:bg-[#f4ce14] transition-colors duration-300">
           <a href="#">Login</a>
         </li>
       </ul>
