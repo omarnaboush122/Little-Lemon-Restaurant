@@ -12,10 +12,10 @@ const Header = () => {
     setIsOpenMenu(false);
   };
   return (
-    <header>
-      <div className="flex w-full items-center justify-between">
-        <img src="./assets/Logo.svg" alt="little lemon logo" className="mx-6 mt-6" />
-        <button className="cursor-pointer">
+    <header className="md:flex md:justify-between md:gap-4">
+      <div className="flex w-full items-center justify-between md:block md:w-auto md:flex-[0.3]">
+        <img src="./assets/Logo.svg" alt="little lemon logo" className="ml-6 mr-0 mt-6 md:mt-4 cursor-pointer" />
+        <button className="cursor-pointer md:hidden">
           {isopenMenu ? (
             <img
               src="./assets/close-icon.png"
@@ -33,7 +33,7 @@ const Header = () => {
           )}
         </button>
       </div>
-      <Navbar/>
+      <Navbar isopenMenu={isopenMenu}/>
     </header>
   );
 };
