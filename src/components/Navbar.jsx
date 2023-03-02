@@ -25,7 +25,7 @@ const Navbar = ({ isopenMenu }) => {
       )}
       <div className="hidden md:grid md:grid-cols-7 md:w-full md:items-center">
       <a href="#" className="px-2 text-center">
-      <img src="./assets/log.png" alt="little lemon logo" className="max-h-16 ml-5 h-16 cursor-pointer" />
+      <img src="./assets/log.png" alt="little lemon logo" className="max-h-16 ml-5 pr-4 h-16 cursor-pointer" />
       </a>
       <a href="#Home" className="py-5 text-center text-xl font-bold cursor-pointer hover:bg-[#f4ce14] transition-colors duration-300 lg:text-2xl">Home</a>
       <a href="#About" className="py-5 text-center text-xl font-bold cursor-pointer hover:bg-[#f4ce14] transition-colors duration-300 lg:text-2xl">About</a>
