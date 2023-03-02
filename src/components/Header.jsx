@@ -14,14 +14,14 @@ const Header = () => {
   return (
     <header>
       <div className="flex w-full items-center justify-between md:hidden">
-        <img src="./assets/log.png" alt="little lemon logo" className="max-h-16 ml-6 mr-0 mt-6 md:mt-4 cursor-pointer" />
+        <img src="./assets/log.png" alt="little lemon logo" className="max-h-16 ml-4 mr-0 mt-4 cursor-pointer" />
         <button className="cursor-pointer md:hidden">
           {isopenMenu ? (
             <img
               src="./assets/close-icon.png"
               alt="close-icon"
               onClick={closeMenu}
-              className="w-10 mx-6 mt-6"
+              className="w-10 mx-4 mt-4"
             />
           ) : (
             <img
