@@ -1,9 +1,11 @@
-import Restaurant from "../components/home/Restaurant";
+import Intro from "../components/home/Intro";
+import Specials from "../components/home/Specials";
 
 const Home = () => {
   return (
     <main>
-      <Restaurant />
+      <Intro />
+      <Specials/>
     </main>
   );
 };
