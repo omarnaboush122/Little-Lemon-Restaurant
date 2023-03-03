@@ -1,6 +1,29 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Form = () => {
+  const [inputs, setInputs] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    numberOfPeople: 1,
+    selectDate: "",
+    selectTime: "17:00",
+    occasion: "none",
+    seatingPreferences: "none",
+    additionalComments: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setInputs((prevInputs) => ({
+      ...prevInputs,
+      [name]: value,
+    }));
+  };
+
+  console.log(inputs);
+
   return (
     <section className="p-8">
       <form className="flex flex-col justify-center items-center">
@@ -13,6 +36,9 @@ const Form = () => {
             type="text"
             placeholder="e.g. Omar"
             id="FirstName"
+            name="firstName"
+            value={inputs.firstName}
+            onChange={handleChange}
           />
         </div>
         <div className="mb-6">
@@ -24,6 +50,9 @@ const Form = () => {
             type="text"
             placeholder="e.g. Naboush"
             id="LastName"
+            name="lastName"
+            value={inputs.lastName}
+            onChange={handleChange}
           />
         </div>
         <div className="mb-6">
@@ -35,6 +64,9 @@ const Form = () => {
             placeholder="e.g. omarnaboush509@gmail.com"
             id="Email"
             className="bg-[#eee] border-0 outline-0 py-2 px-4 w-80 rounded-md"
+            name="email"
+            value={inputs.email}
+            onChange={handleChange}
           />
         </div>
         <div className="mb-6">
@@ -46,6 +78,9 @@ const Form = () => {
             placeholder="e.g. 81 346 307"
             id="PhoneNumber"
             className="bg-[#eee] border-0 outline-0 py-2 px-4 w-80 rounded-md"
+            name="phoneNumber"
+            value={inputs.phoneNumber}
+            onChange={handleChange}
           />
         </div>
         <div className="mb-6">
@@ -56,6 +91,11 @@ const Form = () => {
             type="number"
             id="NumberofPeople"
             className="bg-[#eee] border-0 outline-0 py-2 px-4 w-80 rounded-md"
+            min={1}
+            max={100}
+            name="numberOfPeople"
+            value={inputs.numberOfPeople}
+            onChange={handleChange}
           />
         </div>
         <div className="mb-6">
@@ -66,6 +106,9 @@ const Form = () => {
             type="date"
             id="SelectDate"
             className="bg-[#eee] border-0 outline-0 py-2 px-4 w-80 rounded-md"
+            value={inputs.selectDate}
+            name="selectDate"
+            onChange={handleChange}
           />
         </div>
         <div className="mb-6">
@@ -75,6 +118,9 @@ const Form = () => {
           <select
             id="SelectTime"
             className="bg-[#eee] border-0 outline-0 py-2 px-4 w-80 rounded-md"
+            name="selectTime"
+            value={inputs.selectTime}
+            onChange={handleChange}
           >
             <option value="17:00">17:00</option>
             <option value="17:30">17:30</option>
@@ -90,6 +136,9 @@ const Form = () => {
           <select
             id="Occasion"
             className="bg-[#eee] border-0 outline-0 py-2 px-4 w-80 rounded-md"
+            name="occasion"
+            value={inputs.occasion}
+            onChange={handleChange}
           >
             <option value="none">None</option>
             <option value="birthday">Birthday</option>
@@ -105,6 +154,9 @@ const Form = () => {
           <select
             id="Seatingpreferences"
             className="bg-[#eee] border-0 outline-0 py-2 px-4 w-80 rounded-md"
+            name="seatingPreferences"
+            value={inputs.seatingPreferences}
+            onChange={handleChange}
           >
             <option value="none">None</option>
             <option value="indoors">Indoors</option>
@@ -122,6 +174,9 @@ const Form = () => {
             cols="50"
             rows="8"
             placeholder="Additional Comments"
+            name="additionalComments"
+            value={inputs.additionalComments}
+            onChange={handleChange}
           ></textarea>
         </div>
         <div className="flex flex-col items-center">
