@@ -1,39 +1,40 @@
 const Form = () => {
   return (
-    <section>
+    <section className="py-8 flex flex-col justify-center items-center">
       <article>
         <form>
-          <div>
-            <label htmlFor="FirstName">First Name</label>
-            <input type="text" placeholder="e.g. Omar" id="FirstName" />
+          <div className="mb-6">
+            <label className="block" htmlFor="FirstName">First Name</label>
+            <input className="bg-[#eee] border-0 outline-0 py-2 px-4 w-80 rounded-md" type="text" placeholder="e.g. Omar" id="FirstName" />
           </div>
-          <div>
-            <label htmlFor="LastName">Last Name</label>
-            <input type="text" placeholder="e.g. Naboush" id="LastName" />
+          <div className="mb-6">
+            <label className="block" htmlFor="LastName">Last Name</label>
+            <input className="bg-[#eee] border-0 outline-0 py-2 px-4 w-80 rounded-md" type="text" placeholder="e.g. Naboush" id="LastName" />
           </div>
-          <div>
-            <label htmlFor="Email">Email</label>
+          <div className="mb-6">
+            <label className="block" htmlFor="Email">Email</label>
             <input
               type="email"
               placeholder="e.g. omarnaboush509@gmail.com"
               id="Email"
+              className="bg-[#eee] border-0 outline-0 py-2 px-4 w-80 rounded-md"
             />
           </div>
-          <div>
-            <label htmlFor="PhoneNumber">Phone Number</label>
-            <input type="number" placeholder="e.g. 81 346 307" id="PhoneNumber" />
+          <div className="mb-6">
+            <label className="block" htmlFor="PhoneNumber">Phone Number</label>
+            <input type="number" placeholder="e.g. 81 346 307" id="PhoneNumber" className="bg-[#eee] border-0 outline-0 py-2 px-4 w-80 rounded-md" />
           </div>
-          <div>
-            <label htmlFor="NumberofPeople">Number of People</label>
-            <input type="number" id="NumberofPeople" />
+          <div className="mb-6">
+            <label className="block" htmlFor="NumberofPeople">Number of People</label>
+            <input type="number" id="NumberofPeople" className="bg-[#eee] border-0 outline-0 py-2 px-4 w-80 rounded-md" />
           </div>
-          <div>
-            <label htmlFor="SelectDate">Select Date</label>
-            <input type="date" id="SelectDate" />
+          <div className="mb-6">
+            <label className="block" htmlFor="SelectDate">Select Date</label>
+            <input type="date" id="SelectDate" className="bg-[#eee] border-0 outline-0 py-2 px-4 w-80 rounded-md" />
           </div>
-          <div>
-            <label htmlFor="SelectTime">Select Time</label>
-            <select id="SelectTime">
+          <div className="mb-6">
+            <label className="block" htmlFor="SelectTime">Select Time</label>
+            <select id="SelectTime" className="bg-[#eee] border-0 outline-0 py-2 px-4 w-80 rounded-md">
               <option value="17:00">17:00</option>
               <option value="17:30">17:30</option>
               <option value="19:30">19:30</option>
@@ -41,9 +42,9 @@ const Form = () => {
               <option value="21:30">21:30</option>
             </select>
           </div>
-          <div>
-            <label htmlFor="Occasion">Occasion</label>
-            <select id="Occasion">
+          <div className="mb-6">
+            <label className="block" htmlFor="Occasion">Occasion</label>
+            <select id="Occasion" className="bg-[#eee] border-0 outline-0 py-2 px-4 w-80 rounded-md">
               <option value="none">None</option>
               <option value="birthday">Birthday</option>
               <option value="anniversary">Anniversary</option>
@@ -51,9 +52,9 @@ const Form = () => {
               <option value="other">Other</option>
             </select>
           </div>
-          <div>
-            <label htmlFor="Seatingpreferences">Seating preferences</label>
-            <select id="Seatingpreferences">
+          <div className="mb-6">
+            <label className="block" htmlFor="Seatingpreferences">Seating preferences</label>
+            <select id="Seatingpreferences" className="bg-[#eee] border-0 outline-0 py-2 px-4 w-80 rounded-md">
               <option value="none">None</option>
               <option value="indoors">Indoors</option>
               <option value="outdoors(Patio)">Outdoors(Patio)</option>
@@ -61,8 +62,8 @@ const Form = () => {
             </select>
           </div>
           <div>
-            <label htmlFor="AdditionalComments">Additional Comments</label>
-            <textarea id="AdditionalComments" cols="30" rows="10" placeholder="Additional Comments"></textarea>
+            <label className="block" htmlFor="AdditionalComments">Additional Comments</label>
+            <textarea className="bg-[#eee] border-0 outline-0 py-2 px-4 w-80 rounded-md resize-none" id="AdditionalComments" cols="50" rows="8" placeholder="Additional Comments"></textarea>
           </div>
         </form>
       </article>
