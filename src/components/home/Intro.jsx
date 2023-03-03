@@ -3,7 +3,7 @@
 const Intro = () => {
   return (
     <section className="bg-[#495e57] text-white">
-        <div className="container mx-auto py-5 px-8 grid grid-cols-2">
+        <div className="container mx-auto py-12 px-8 grid grid-cols-2">
           <div>
             <h1 className="text-2xl text-[#f4ce14] font-bold sm:text-3xl md:text-4xl">Little Lemon</h1>
             <h2 className="text-2xl font-bold sm:text-3xl md:text-4xl">Chicago</h2>
