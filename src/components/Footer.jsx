@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Footer = () => {
@@ -8,12 +9,12 @@ const Footer = () => {
       <div className="mt-4 md:mt-0">
         <h3 className="text-2xl md:text-3xl font-bold">Navigation</h3>
       <ul className="my-2">
-        <li className="md:text-lg hover:text-[#f4ce14] transition-colors duration-300"><a href="#Home">Home</a></li>
-        <li className="md:text-lg hover:text-[#f4ce14] transition-colors duration-300"><a href="#About">About</a></li>
-        <li className="md:text-lg hover:text-[#f4ce14] transition-colors duration-300"><a href="#Menu">Menu</a></li>
-        <li className="md:text-lg hover:text-[#f4ce14] transition-colors duration-300"><a href="#Reservations">Reservations</a></li>
-        <li className="md:text-lg hover:text-[#f4ce14] transition-colors duration-300"><a href="#Order Online">Order Online</a></li>
-        <li className="md:text-lg hover:text-[#f4ce14] transition-colors duration-300"><a href="#">Login</a></li>
+        <li className="md:text-lg hover:text-[#f4ce14] transition-colors duration-300"><Link to={"/home"}>Home</Link></li>
+        <li className="md:text-lg hover:text-[#f4ce14] transition-colors duration-300"><Link to={"/about"}>About</Link></li>
+        <li className="md:text-lg hover:text-[#f4ce14] transition-colors duration-300"><Link to={"/public/assets/menu.9b7e092be47f16ae049f.webp"} target="_blank">Menu</Link></li>
+        <li className="md:text-lg hover:text-[#f4ce14] transition-colors duration-300"><Link to={"/reservations"}>Reservations</Link></li>
+        <li className="md:text-lg hover:text-[#f4ce14] transition-colors duration-300"><Link to={"/order"}>Order Online</Link></li>
+        <li className="md:text-lg hover:text-[#f4ce14] transition-colors duration-300"><Link to={"/login"}>Login</Link></li>
       </ul>
       </div>
       <div>
