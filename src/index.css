@@ -6,3 +6,10 @@
 body {
   font-family: 'Karla', sans-serif;
 }
+
+.main {
+  background-image: url("../public/assets/food5.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

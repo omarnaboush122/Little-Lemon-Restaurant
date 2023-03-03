@@ -1,10 +1,11 @@
+import AboutMain from "../components/about/AboutMain";
 
 
 const About = () => {
   return (
-    <main>
-      about
-    </main>
+    <>
+    <AboutMain/>
+    </>
   );
 }
 
