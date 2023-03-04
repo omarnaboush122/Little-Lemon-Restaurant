@@ -31,7 +31,7 @@ const Navbar = ({ isopenMenu }) => {
       </Link>
       <Link to={"/"} className="py-5 text-center text-xl font-bold cursor-pointer hover:bg-[#f4ce14] transition-colors duration-300 lg:text-2xl">Home</Link>
       <Link to={"/about"}  className="py-5 text-center text-xl font-bold cursor-pointer hover:bg-[#f4ce14] transition-colors duration-300 lg:text-2xl">About</Link>
-      <Link to={"/public/assets/menu.9b7e092be47f16ae049f.webp"} target="_blank" className="py-5 text-center text-xl font-bold cursor-pointer hover:bg-[#f4ce14] transition-colors duration-300 lg:text-2xl">Menu</Link>
+      <Link to={"/assets/menu.9b7e092be47f16ae049f.webp"} target="_blank" className="py-5 text-center text-xl font-bold cursor-pointer hover:bg-[#f4ce14] transition-colors duration-300 lg:text-2xl">Menu</Link>
       <Link to={"/reservations"} className="py-5 text-center text-xl font-bold cursor-pointer hover:bg-[#f4ce14] transition-colors duration-300 lg:text-2xl">Reservations</Link>
       <Link to={"/order"} className="py-5 text-center text-xl font-bold cursor-pointer hover:bg-[#f4ce14] transition-colors duration-300 lg:text-2xl">Order</Link>
       <Link to={"/login"} className="py-5 text-center text-xl font-bold cursor-pointer hover:bg-[#f4ce14] transition-colors duration-300 lg:text-2xl">Login</Link>

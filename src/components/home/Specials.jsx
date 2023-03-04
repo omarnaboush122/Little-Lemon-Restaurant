@@ -8,7 +8,7 @@ const Specials = () => {
           This weeks specials
         </h1>
         <Link
-          to={"/public/assets/menu.9b7e092be47f16ae049f.webp"}
+          to={"/assets/menu.9b7e092be47f16ae049f.webp"}
           target="_blank"
           className="bg-[#f4ce14] font-bold py-2 px-4 rounded-md border hover:bg-[#495e57] hover:text-white transition-colors duration-300 sm:py-3 sm:px-6 md:py-4 md:px-8 md:text-2xl lg:px-10 lg:text-3xl"
         >

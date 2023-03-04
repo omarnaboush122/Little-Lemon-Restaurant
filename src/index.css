@@ -1,15 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
+}
+
+.main,
+.confirmation {
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .main {
   background-image: url("../public/assets/food5.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
+}
+
+.confirmation {
+  background-image: url("../public/assets/food6.jpeg");
+  background-position: top;
 }
