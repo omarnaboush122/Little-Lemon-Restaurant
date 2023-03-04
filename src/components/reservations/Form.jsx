@@ -19,6 +19,7 @@ const Form = () => {
     lastName: false,
     email: false,
     phoneNumber: false,
+    date: false,
   });
 
   const [isSuccess, setIsSuccess] = useState({
@@ -26,6 +27,7 @@ const Form = () => {
     lastName: false,
     email: false,
     phoneNumber: false,
+    date: false,
   });
 
   const handleChange = (e) => {
@@ -37,10 +39,24 @@ const Form = () => {
     }));
   };
 
+  const nameValidation = (name) => {
+    const nameRegex = /^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/;
+    return nameRegex.test(name);
+  };
+
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const isValidPhoneNumber = (phoneNumberInput) => {
+    const phoneNumberRegex = /^\+(?:[0-9]●?){6,14}[0-9]$/;
+    return phoneNumberRegex.test(phoneNumberInput);
+  };
   return (
     <section className="p-8">
       <form className="flex flex-col justify-center items-center">
-        <div className="mb-6">
+        <div className="relative mb-6">
           <label className="block" htmlFor="FirstName">
             First Name
           </label>
@@ -53,8 +69,11 @@ const Form = () => {
             value={inputs.firstName}
             onChange={handleChange}
           />
+          <p className="absolute top-0 right-0 text-red-500 text-sm">
+            This Field is required
+          </p>
         </div>
-        <div className="mb-6">
+        <div className="relative mb-6">
           <label className="block" htmlFor="LastName">
             Last Name
           </label>
@@ -67,8 +86,11 @@ const Form = () => {
             value={inputs.lastName}
             onChange={handleChange}
           />
+          <p className="absolute top-0 right-0 text-red-500 text-sm">
+            This Field is required
+          </p>
         </div>
-        <div className="mb-6">
+        <div className="relative mb-6">
           <label className="block" htmlFor="Email">
             Email
           </label>
@@ -81,13 +103,16 @@ const Form = () => {
             value={inputs.email}
             onChange={handleChange}
           />
+          <p className="absolute top-0 right-0 text-red-500 text-sm">
+            This Field is required
+          </p>
         </div>
-        <div className="mb-6">
+        <div className="relative mb-6">
           <label className="block" htmlFor="PhoneNumber">
             Phone Number
           </label>
           <input
-            type="number"
+            type="tel"
             placeholder="e.g. 81 346 307"
             id="PhoneNumber"
             className="bg-[#eee] border-0 outline-0 py-2 px-4 w-80 rounded-md"
@@ -95,6 +120,9 @@ const Form = () => {
             value={inputs.phoneNumber}
             onChange={handleChange}
           />
+          <p className="absolute top-0 right-0 text-red-500 text-sm">
+            This Field is required
+          </p>
         </div>
         <div className="mb-6">
           <label className="block" htmlFor="NumberofPeople">
@@ -111,7 +139,7 @@ const Form = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="mb-6">
+        <div className="relative mb-6">
           <label className="block" htmlFor="SelectDate">
             Select Date
           </label>
@@ -123,6 +151,9 @@ const Form = () => {
             name="selectDate"
             onChange={handleChange}
           />
+          <p className="absolute top-0 right-0 text-red-500 text-sm">
+            This Field is required
+          </p>
         </div>
         <div className="mb-6">
           <label className="block" htmlFor="SelectTime">
