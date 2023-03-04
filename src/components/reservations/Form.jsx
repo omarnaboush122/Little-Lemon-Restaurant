@@ -14,21 +14,11 @@ const Form = () => {
     additionalComments: "",
   });
 
-  const [isError, setIsError] = useState({
-    firstName: false,
-    lastName: false,
-    email: false,
-    phoneNumber: false,
-    date: false,
-  });
-
-  const [isSuccess, setIsSuccess] = useState({
-    firstName: false,
-    lastName: false,
-    email: false,
-    phoneNumber: false,
-    date: false,
-  });
+  const [isFirstNameError, setIsFirstNameError] = useState(false);
+  const [isLastNameError, setIsLastNameError] = useState(false);
+  const [isEmailError, setIsEmailError] = useState(false);
+  const [isPhoneNumberError, setIsPhoneNumberError] = useState(false);
+  const [isDateError, setIsDateError] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,7 +29,7 @@ const Form = () => {
     }));
   };
 
-  const nameValidation = (name) => {
+  const isValidName = (name) => {
     const nameRegex = /^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/;
     return nameRegex.test(name);
   };
@@ -53,9 +43,40 @@ const Form = () => {
     const phoneNumberRegex = /^\+(?:[0-9]●?){6,14}[0-9]$/;
     return phoneNumberRegex.test(phoneNumberInput);
   };
+
+  const isValidDate = (date) => {
+    const dateRegex =
+      /^(0[1-9]|1[012])\/(0[1-9]|[12][0-9]|3[01])\/(19|20)\d{2}$/;
+    return dateRegex.test(date);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    isValidName(inputs.firstName)
+      ? setIsFirstNameError(false)
+      : setIsFirstNameError(true);
+
+    isValidName(inputs.lastName)
+      ? setIsLastNameError(false)
+      : setIsLastNameError(true);
+
+    isValidEmail(inputs.email) ? setIsEmailError(false) : setIsEmailError(true);
+
+    isValidPhoneNumber(inputs.phoneNumber)
+      ? setIsPhoneNumberError(false)
+      : setIsPhoneNumberError(true);
+
+    isValidDate(inputs.date) ? setIsDateError(false) : setIsDateError(true);
+  };
+
+  console.log(inputs);
   return (
     <section className="p-8">
-      <form className="flex flex-col justify-center items-center">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col justify-center items-center"
+      >
         <div className="relative mb-6">
           <label className="block" htmlFor="FirstName">
             First Name
@@ -69,9 +90,11 @@ const Form = () => {
             value={inputs.firstName}
             onChange={handleChange}
           />
-          <p className="absolute top-0 right-0 text-red-500 text-sm">
-            This Field is required
-          </p>
+          {isFirstNameError && (
+            <p className="absolute top-0 right-0 text-red-500 text-sm">
+              This Field is required
+            </p>
+          )}
         </div>
         <div className="relative mb-6">
           <label className="block" htmlFor="LastName">
@@ -86,9 +109,11 @@ const Form = () => {
             value={inputs.lastName}
             onChange={handleChange}
           />
-          <p className="absolute top-0 right-0 text-red-500 text-sm">
-            This Field is required
-          </p>
+          {isLastNameError && (
+            <p className="absolute top-0 right-0 text-red-500 text-sm">
+              This Field is required
+            </p>
+          )}
         </div>
         <div className="relative mb-6">
           <label className="block" htmlFor="Email">
@@ -103,9 +128,11 @@ const Form = () => {
             value={inputs.email}
             onChange={handleChange}
           />
-          <p className="absolute top-0 right-0 text-red-500 text-sm">
-            This Field is required
-          </p>
+          {isEmailError && (
+            <p className="absolute top-0 right-0 text-red-500 text-sm">
+              This Field is required
+            </p>
+          )}
         </div>
         <div className="relative mb-6">
           <label className="block" htmlFor="PhoneNumber">
@@ -113,16 +140,18 @@ const Form = () => {
           </label>
           <input
             type="tel"
-            placeholder="e.g. 81 346 307"
+            placeholder="e.g. +96181346307"
             id="PhoneNumber"
             className="bg-[#eee] border-0 outline-0 py-2 px-4 w-80 rounded-md"
             name="phoneNumber"
             value={inputs.phoneNumber}
             onChange={handleChange}
           />
-          <p className="absolute top-0 right-0 text-red-500 text-sm">
-            This Field is required
-          </p>
+          {isPhoneNumberError && (
+            <p className="absolute top-0 right-0 text-red-500 text-sm">
+              This Field is required
+            </p>
+          )}
         </div>
         <div className="mb-6">
           <label className="block" htmlFor="NumberofPeople">
@@ -151,9 +180,11 @@ const Form = () => {
             name="selectDate"
             onChange={handleChange}
           />
-          <p className="absolute top-0 right-0 text-red-500 text-sm">
-            This Field is required
-          </p>
+          {isDateError && (
+            <p className="absolute top-0 right-0 text-red-500 text-sm">
+              This Field is required
+            </p>
+          )}
         </div>
         <div className="mb-6">
           <label className="block" htmlFor="SelectTime">
