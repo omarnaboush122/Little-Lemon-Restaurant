@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Form = () => {
   const [inputs, setInputs] = useState({
@@ -70,7 +70,26 @@ const Form = () => {
     isValidDate(inputs.date) ? setIsDateError(false) : setIsDateError(true);
   };
 
-  console.log(inputs);
+  useEffect(() => {
+    const time = setTimeout(() => {
+      setIsFirstNameError(false);
+      setIsLastNameError(false);
+      setIsEmailError(false);
+      setIsPhoneNumberError(false);
+      setIsDateError(false);
+    }, 3000);
+
+    return () => {
+      clearTimeout(time);
+    };
+  }, [
+    isFirstNameError,
+    isLastNameError,
+    isEmailError,
+    isPhoneNumberError,
+    isDateError,
+  ]);
+
   return (
     <section className="p-8">
       <form
