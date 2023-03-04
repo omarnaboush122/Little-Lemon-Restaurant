@@ -28,12 +28,12 @@ const Specials = () => {
                 Refreshing salad, made with tomato, lettuce, feta cheese, and
                 olives. Dressed with salt, hot pepper, and olive oil.
               </p>
-              <a
-                href="#order"
+              <Link
+                to={"/order"}
                 className="bg-[#f4ce14] font-bold block w-fit py-3 px-6 rounded-md border hover:bg-[#495e57] hover:text-white transition-colors duration-300 md:text-lg lg:text-xl"
               >
                 Order for Delivery
-              </a>
+              </Link>
             </div>
           </article>
           <article>
@@ -49,12 +49,12 @@ const Specials = () => {
                 Toasted bread, topped with tomato, prosciutto, and cheese.
                 Seasoned with salt and olive oil.
               </p>
-              <a
-                href="#order"
+              <Link
+                to={"/order"}
                 className="bg-[#f4ce14] font-bold block w-fit py-3 px-6 rounded-md border hover:bg-[#495e57] hover:text-white transition-colors duration-300 md:text-lg lg:text-xl"
               >
                 Order for Delivery
-              </a>
+              </Link>
             </div>
           </article>
           <article>
@@ -70,12 +70,12 @@ const Specials = () => {
                 Fresh baked lemon bread coated in salt and sugar. Powdered in
                 citrus and lemon zest.
               </p>
-              <a
-                href="#order"
+              <Link
+                to={"/order"}
                 className="bg-[#f4ce14] font-bold block w-fit py-3 px-6 rounded-md border hover:bg-[#495e57] hover:text-white transition-colors duration-300 md:text-lg lg:text-xl"
               >
                 Order for Delivery
-              </a>
+              </Link>
             </div>
           </article>
         </div>

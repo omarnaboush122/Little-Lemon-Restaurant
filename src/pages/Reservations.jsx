@@ -4,15 +4,16 @@ import ReservationMain from "../components/reservations/ReservationMain";
 import Confirmation from "../confirmation/Confirmation";
 
 const Reservations = () => {
-  const [isRevserved, setIsReserved] = useState(true);
+  const [isReserved, setIsReserved] = useState(false);
+
   return (
     <main>
-      {isRevserved ? (
+      {isReserved ? (
         <Confirmation />
       ) : (
         <>
           <ReservationMain />
-          <Form isRevserved={isRevserved} />
+          <Form isReserved={isReserved} setIsReserved={setIsReserved} />
         </>
       )}
     </main>

@@ -14,7 +14,11 @@ const Header = () => {
   return (
     <header>
       <div className="flex w-full items-center justify-between md:hidden">
-        <img src="./assets/log.png" alt="little lemon logo" className="max-h-16 ml-4 mr-0 mt-4 cursor-pointer" />
+        <img
+          src="./assets/log.png"
+          alt="little lemon logo"
+          className="max-h-16 ml-4 mr-0 mt-4 cursor-pointer"
+        />
         <button className="cursor-pointer md:hidden">
           {isopenMenu ? (
             <img
@@ -33,7 +37,7 @@ const Header = () => {
           )}
         </button>
       </div>
-      <Navbar isopenMenu={isopenMenu}/>
+      <Navbar isopenMenu={isopenMenu} />
     </header>
   );
 };

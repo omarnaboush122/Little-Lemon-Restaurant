@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
-const Form = () => {
+const Form = ({ setIsReserved }) => {
   const [inputs, setInputs] = useState({
     firstName: "",
     lastName: "",
     email: "",
     phoneNumber: "",
     numberOfPeople: 1,
-    selectDate: "",
+    date: "",
     selectTime: "17:00",
     occasion: "none",
     seatingPreferences: "none",
@@ -44,12 +44,6 @@ const Form = () => {
     return phoneNumberRegex.test(phoneNumberInput);
   };
 
-  const isValidDate = (date) => {
-    const dateRegex =
-      /^(0[1-9]|1[012])\/(0[1-9]|[12][0-9]|3[01])\/(19|20)\d{2}$/;
-    return dateRegex.test(date);
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -67,7 +61,17 @@ const Form = () => {
       ? setIsPhoneNumberError(false)
       : setIsPhoneNumberError(true);
 
-    isValidDate(inputs.date) ? setIsDateError(false) : setIsDateError(true);
+    inputs.date !== "" ? setIsDateError(false) : setIsDateError(true);
+
+    if (
+      isValidName(inputs.firstName) &&
+      isValidName(inputs.lastName) &&
+      isValidEmail(inputs.email) &&
+      isValidPhoneNumber(inputs.phoneNumber) &&
+      inputs.date !== ""
+    ) {
+      setIsReserved(true);
+    }
   };
 
   useEffect(() => {
@@ -77,7 +81,7 @@ const Form = () => {
       setIsEmailError(false);
       setIsPhoneNumberError(false);
       setIsDateError(false);
-    }, 3000);
+    }, 5000);
 
     return () => {
       clearTimeout(time);
@@ -195,8 +199,8 @@ const Form = () => {
             type="date"
             id="SelectDate"
             className="bg-[#eee] border-0 outline-0 py-2 px-4 w-80 rounded-md"
-            value={inputs.selectDate}
-            name="selectDate"
+            value={inputs.date}
+            name="date"
             onChange={handleChange}
           />
           {isDateError && (

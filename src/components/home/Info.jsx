@@ -3,8 +3,12 @@ const Info = () => {
     <section className="bg-[#f4ce14] min-h-[22rem]">
       <div className="container mx-auto px-8 py-12 grid grid-cols-2">
         <article>
-          <h1 className="text-2xl font-bold md:text-3xl lg:text-4xl">Little Lemon</h1>
-          <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl">Chicago</h2>
+          <h1 className="text-2xl font-bold md:text-3xl lg:text-4xl">
+            Little Lemon
+          </h1>
+          <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl">
+            Chicago
+          </h2>
           <p className="text-sm max-w-xs mt-4 md:text-base md:max-w-sm lg:text-lg">
             Little Lemon opened in 1995 by two Italian brothers, Adrian and
             Mario. Despite the city's diversity, the two brothers recognized the
