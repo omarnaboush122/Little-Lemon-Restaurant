@@ -14,15 +14,28 @@ const Form = () => {
     additionalComments: "",
   });
 
+  const [isError, setIsError] = useState({
+    firstName: false,
+    lastName: false,
+    email: false,
+    phoneNumber: false,
+  });
+
+  const [isSuccess, setIsSuccess] = useState({
+    firstName: false,
+    lastName: false,
+    email: false,
+    phoneNumber: false,
+  });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
+
     setInputs((prevInputs) => ({
       ...prevInputs,
       [name]: value,
     }));
   };
-
-  console.log(inputs);
 
   return (
     <section className="p-8">
@@ -186,7 +199,7 @@ const Form = () => {
           </p>
           <button
             type="submit"
-            className="bg-[#f4ce14] font-bold py-2 px-4 rounded-md border hover:bg-[#495e57] hover:text-white transition-colors duration-300 sm:py-3 sm:px-6 md:py-4 md:px-8 md:text-2xl lg:px-10 lg:text-3xl"
+            className="bg-[#f4ce14] w-full text-2xl font-bold py-2 px-4 rounded-md border hover:bg-[#495e57] hover:text-white transition-colors duration-300 sm:py-4 sm:px-10 sm:w-auto md:px-12 md:text-3xl"
           >
             Book Table
           </button>
