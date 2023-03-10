@@ -1,13 +1,14 @@
 import { useState } from "react";
 import data from "../../data.json";
 import SingleTestimonial from "./SingleTestimonial";
+
 const Testimonials = () => {
   const [reviews, setReviews] = useState(data.reviews);
 
   const allReviews = reviews.map((review) => (
     <SingleTestimonial key={review.id} {...review} />
   ));
-  
+
   return (
     <section>
       <div className="container mx-auto px-8 py-12">
