@@ -18,7 +18,7 @@ const Intro = () => {
           </p>
           <Link
             to={"/reservations"}
-            className="bg-[#f4ce14] text-black font-bold block w-fit py-1 px-4 mt-4 rounded-sm border hover:bg-transparent border-[#f4ce14] hover:text-white hover:border-white transition-colors duration-300 sm:py-2 sm:px-6 md:py-3 md:px-8 md:text-xl lg:py-4 lg:px-10 lg:text-3xl"
+            className="bg-[#f4ce14] text-black font-bold block w-fit py-1 px-2 mt-4 rounded-sm border hover:bg-transparent border-[#f4ce14] hover:text-white hover:border-white transition-colors duration-300 sm:py-2 sm:px-6 md:py-3 md:px-8 md:text-xl lg:py-4 lg:px-10 lg:text-3xl"
           >
             Reserve a table
           </Link>
