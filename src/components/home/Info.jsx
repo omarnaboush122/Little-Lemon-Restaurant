@@ -23,11 +23,13 @@ const Info = () => {
             src="./assets/food3.jpeg"
             alt="food3"
             className="h-full w-[60%] object-cover  relative left-0 top-0"
+            loading="lazy"
           />
           <img
             src="./assets/food2.jpeg"
             alt="food2"
             className="h-full w-[60%] object-cover absolute -top-14 left-20"
+            loading="lazy"
           />
         </article>
       </div>

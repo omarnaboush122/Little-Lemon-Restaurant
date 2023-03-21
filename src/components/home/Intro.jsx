@@ -27,6 +27,7 @@ const Intro = () => {
           src="./assets/food1.png"
           alt="food1"
           className="w-full h-[17rem] pl-8 object-cover"
+          loading="lazy"
         />
       </div>
     </section>
